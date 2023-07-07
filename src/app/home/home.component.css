@@ -1,0 +1,19 @@
+mat-card {
+    width: 260px;
+    height: 250px;
+    display: inline-block;
+    margin: 20px;
+}
+
+mat-card img{
+    height: 200px;
+    width: 260px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a :hover {
+    color: greenyellow;
+}

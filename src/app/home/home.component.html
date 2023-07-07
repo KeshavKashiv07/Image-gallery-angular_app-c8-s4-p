@@ -1,0 +1,14 @@
+<div style="display:flex">
+    <div>
+        <mat-card *ngFor="let image of imageList">
+            <a routerLink="{{image.id}}">
+                <img mat-card-image [src]="image.url">
+                <mat-card-content>
+                    <mat-card-subtitle>
+                        {{image.caption}} | {{image.size}} | {{image.category}}
+                    </mat-card-subtitle>
+                </mat-card-content>
+            </a>
+        </mat-card>
+    </div>
+</div>

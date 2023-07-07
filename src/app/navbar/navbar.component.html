@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <!-- the anchor tags below need to be modified with routerLink -->
+    <a routerLink="/">Image Gallery</a>
+    <a routerLink="/image-view" id="home" mat-stroked-button> <mat-icon>home</mat-icon> </a>
+</mat-toolbar>
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="'navigation'"
+        [mode]="'push'" 
+        [opened]="false">
+        <mat-nav-list>
+            <a mat-list-item href="#">Favorites</a>
+            <a mat-list-item href="#">Upload Image</a>
+            <a mat-list-item href="#">Archieved</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+         <!-- The routed components should get loaded here -->
+         <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
